@@ -1,22 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import {useState} from 'react'
+import {motion, AnimatePresence} from 'framer-motion'
+import Tabs from './Components/Tabs';
+import { tabs } from './tabsData';
+import { toolbars } from './toolbarData';
+import Toolbar from './Components/Toolbar';
 
 function App() {
+
+  const [activeTab, setActiveTab] = useState(tabs[0].id)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className='action-toolbar'>
+      <header>
+        <main className='page-main'>
+          <section className='section'>
+            <div className='container'>
+              <Toolbar activeTab={activeTab}
+              setActiveTab={setActiveTab}   />
+              <Tabs activeTab={activeTab}
+              setActiveTab={setActiveTab} 
+              />
+            </div>
+          </section>
+        </main>
       </header>
     </div>
   );
