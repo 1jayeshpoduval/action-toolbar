@@ -1,16 +1,17 @@
-*, *::before, *::after{
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 body {
   background-color: rgba(13, 27, 42, 1);
-  color: rgba(255,255,255,0.9);
+  color: rgba(255, 255, 255, 0.9);
   font-weight: 500;
 }
-
 
 .section {
   position: relative;
@@ -69,7 +70,6 @@ body {
   gap: 0.4em;
 }
 
-
 .u-position-relative {
   position: relative;
 }
@@ -85,7 +85,6 @@ body {
 .u-z-index-2 {
   z-index: 2;
 }
-
 
 .u-w-full {
   right: 0;
@@ -126,7 +125,7 @@ body {
 }
 
 .u-pt-0\.2 {
-  padding-top: 0.2em; 
+  padding-top: 0.2em;
 }
 
 .u-pt-0\.5 {
@@ -134,11 +133,11 @@ body {
 }
 
 .u-pb-0\.75 {
-  padding-bottom: 0.75em; 
+  padding-bottom: 0.75em;
 }
 
 .u-pb-0\.5 {
-  padding-bottom: 0.5em; 
+  padding-bottom: 0.5em;
 }
 
 .u-flex-grow {
@@ -156,7 +155,6 @@ body {
 .u-font-weight-500 {
   font-weight: 500;
 }
-
 
 .u-overflow-hidden {
   overflow: hidden;
@@ -222,7 +220,7 @@ body {
 
 .btn {
   border: transparent;
-  background-color:transparent;
+  background-color: transparent;
   font-size: 1rem;
   padding: 0.5em;
   border-radius: 0.5em;
