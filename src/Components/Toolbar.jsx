@@ -10,30 +10,30 @@ const Toolbar = (props) => {
   return (
     <>
       <motion.div
-        className="toolbar u-display-flex u-flex-col u-position-absolute u-left-1/2 u-bottom-28 u-border-radius-1 u-translateX-1/2 u-overflow-hidden u-p-0.5"
+        className="bg-mountain-blue-900 absolute bottom-96 left-1/2 flex -translate-x-1/2 flex-col overflow-hidden rounded-xl p-2"
         animate={{ width: selectedToolbarWidth }}
         transition={{ type: "spring", stiffness: 802, damping: 44 }}
       >
-        <div className="u-display-flex u-flex-col u-gap-2">
+        <div className="flex flex-col gap-8">
           {toolbars.map((toolbar, index) =>
             props.activeTab === index + 1 ? (
               <div
                 className={`${
                   props.activeTab === index + 1
-                    ? "u-display-flex u-flex-align-center u-pl-0.2 u-gap-2"
+                    ? "flex items-center gap-6 pl-2"
                     : ""
                 }`}
                 key={toolbar.id}
-                layoutId="sdasda"
+                layoutId="toolbar"
                 animate={{ width: "auto" }}
               >
                 <motion.div
-                  className="u-overflow-hidden"
+                  className="overflow-hidden"
                   layout="preserve-aspect"
                   layoutId="toolbar-text"
                   transition={{ type: "tween", duration: 0.1 }}
                 >
-                  <span className="u-white-space-nowrap">{toolbar.text}</span>
+                  <span className="whitespace-nowrap">{toolbar.text}</span>
                 </motion.div>
                 <motion.button
                   className={toolbar.btnClass}
@@ -46,7 +46,7 @@ const Toolbar = (props) => {
                   </span>
                 </motion.button>
               </div>
-            ) : null
+            ) : null,
           )}
         </div>
       </motion.div>
